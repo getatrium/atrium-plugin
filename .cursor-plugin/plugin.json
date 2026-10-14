@@ -1,0 +1,18 @@
+{
+  "name": "atrium",
+  "displayName": "atrium",
+  "version": "1.0.0",
+  "description": "Check on and direct the coding agents running in your atrium workspace: see who's working and who's waiting on you, read what they said, relay instructions, and hand off new tasks. Runs the atrium CLI on your own computer.",
+  "author": {
+    "name": "Skybot, LLC",
+    "email": "sup@getatrium.dev"
+  },
+  "publisher": "Skybot, LLC",
+  "homepage": "https://getatrium.dev",
+  "repository": "https://github.com/getatrium/atrium-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.png",
+  "category": "developer-tools",
+  "keywords": ["atrium", "coding agents", "claude code", "codex", "agent fleet", "task handoff"],
+  "skills": "./skills/"
+}

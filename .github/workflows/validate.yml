@@ -1,0 +1,21 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate.mjs
+      - name: Validate manifests against Cursor's schemas
+        run: |
+          curl -fsSL -o /tmp/plugin.schema.json https://raw.githubusercontent.com/cursor/plugins/main/schemas/plugin.schema.json
+          curl -fsSL -o /tmp/marketplace.schema.json https://raw.githubusercontent.com/cursor/plugins/main/schemas/marketplace.schema.json
+          npx --yes -p ajv-cli@5 -p ajv-formats@2 ajv validate --spec=draft7 -c ajv-formats -s /tmp/plugin.schema.json -d .cursor-plugin/plugin.json
+          npx --yes -p ajv-cli@5 -p ajv-formats@2 ajv validate --spec=draft7 -c ajv-formats -s /tmp/marketplace.schema.json -d .cursor-plugin/marketplace.json

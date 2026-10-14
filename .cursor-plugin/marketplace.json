@@ -1,0 +1,17 @@
+{
+  "name": "atrium",
+  "owner": {
+    "name": "Skybot, LLC",
+    "email": "sup@getatrium.dev"
+  },
+  "metadata": {
+    "description": "atrium plugins for Grok Bot and Cursor"
+  },
+  "plugins": [
+    {
+      "name": "atrium",
+      "source": ".",
+      "description": "Check on and direct the coding agents running in your atrium workspace, from Grok Bot or Cursor."
+    }
+  ]
+}
