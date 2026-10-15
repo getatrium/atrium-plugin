@@ -25,7 +25,10 @@ It's one skill, `atrium-agents`. There's no server, no MCP endpoint, no hooks, n
 
 **From the marketplace:** in Grok Bot, open **Connect apps**, search for **atrium**, and choose **Add**. In Cursor, find it in the plugin marketplace.
 
-**To test from source:** clone this repository into `~/.cursor/plugins/local/atrium`, or import it into a team marketplace with **Import from Repo**.
+**Before it's listed:**
+
+- **Grok Bot:** ask your Bot, *"Save the skill at https://github.com/getatrium/atrium-plugin/blob/main/skills/atrium-agents/SKILL.md as a private skill named atrium-agents. Copy it exactly."* It then shows up in the `/` menu and under Connect apps → Your plugins → Manage plugins and skills → Private skills.
+- **Cursor:** clone this repository into `~/.cursor/plugins/local/atrium` and restart Cursor, or run `cursor-agent --plugin-dir <path to this repo>`.
 
 ## What it runs
 
